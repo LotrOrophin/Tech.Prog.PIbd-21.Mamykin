@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
     {
         
         public const int sauWidth = 100;
-        public const int sauHeight = 60;
+        public const int sauHeight = 150;
         public bool Phara { private set; get; }
 
         public MilitaryVehicle(int maxSpeed, float weight, Color mainColor, bool phara)
