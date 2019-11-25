@@ -7,24 +7,27 @@ using System.Drawing;
 
 namespace WindowsFormsApp1
 {
-    class SAU : MilitaryVehicle
+    class MilitaryVehicle : Vehicle
     {
         
-        public Color DopColor { private set; get; }
+        public const int sauWidth = 100;
+        public const int sauHeight = 60;
+        public bool Phara { private set; get; }
 
-        public bool DopKoleso { private set; get; }
-
-
-    
-
-        public SAU(int maxSpeed, float weight, Color mainColor, Color dopColor, bool dopKoleso, bool phara):
-            base (maxSpeed, weight, mainColor, phara)
-
+        public MilitaryVehicle(int maxSpeed, float weight, Color mainColor, bool phara)
         {
-            DopColor = dopColor;
-            DopKoleso = dopKoleso;
+            MaxSpeed = maxSpeed;
+            Weight = weight;
+            MainColor = mainColor;
+            Phara = phara;
         }
-       
+        /*public void SetPosition(int x, int y, int width, int height)
+        {
+            _startPosX = x;
+            _startPosY = y;
+            _pictureWidth = width;
+            _pictureHeight = height;
+        }*/
         public override void MoveTransport(Direction direction)
         {
             float step = MaxSpeed * 100 / Weight;
@@ -46,7 +49,7 @@ namespace WindowsFormsApp1
                     break;
                 //вверх
                 case Direction.Up:
-                    if (_startPosY - step - 90 > 0)
+                    if (_startPosY - step-90 > 0)
                     {
                         _startPosY -= step;
                     }
@@ -64,19 +67,17 @@ namespace WindowsFormsApp1
         {
             Pen pen = new Pen(Color.Black);
             g.DrawLine(pen, _startPosX, _startPosY - 6, _startPosX - 5, _startPosY + 2);
-            g.DrawLine(pen, _startPosX + 90, _startPosY - 6, _startPosX + 95, _startPosY + 2);
+            g.DrawLine(pen, _startPosX+90, _startPosY - 6, _startPosX + 95, _startPosY + 2);
 
             Brush koleso = new SolidBrush(Color.Black);
-            g.FillEllipse(koleso, _startPosX + 2, _startPosY - 13, 20, 20);
-            if (DopKoleso)
-                g.FillEllipse(koleso, _startPosX + 24, _startPosY - 13, 20, 20);
+            g.FillEllipse(koleso, _startPosX +2, _startPosY - 13, 20, 20);
             g.FillEllipse(koleso, _startPosX + 67, _startPosY - 13, 20, 20);
 
+            
 
 
-
-            Brush unit = new SolidBrush(DopColor);
-            g.FillRectangle(unit, _startPosX + 5, _startPosY - 25, 40, 19);
+            Brush unit = new SolidBrush(MainColor);
+            g.FillRectangle(unit, _startPosX+5, _startPosY-25, 40, 19);
            // g.FillEllipse(unit, _startPosX + 12, _startPosY - 100, 22, 20);
 
             Brush korpus = new SolidBrush(MainColor);
@@ -84,27 +85,16 @@ namespace WindowsFormsApp1
             g.FillRectangle(korpus, _startPosX + 70, _startPosY - 27, 20, 21);
             g.FillRectangle(korpus, _startPosX + 10, _startPosY - 33, 28, 10);
 
-            Brush pushka = new SolidBrush(Color.Black);
+            Brush pushka = new SolidBrush(Color.Black);            
             //g.FillRectangle(pushka, _startPosX + 14, _startPosY - 90, 20, 65);
-            int i = 0;
-            while (i < 7) { 
-            g.DrawLine(pen, _startPosX + 14+i, _startPosY - 25, _startPosX + 40+i, _startPosY - 90);
-                i++;
-            }
-            i = 0;
-            while (i < 7)
-            {
-                g.DrawLine(pen, _startPosX + 26 + i, _startPosY - 25, _startPosX + 52 + i, _startPosY - 90);
-                i++;
-            }
-            
             g.FillEllipse(koleso, _startPosX, _startPosY - 10, 90, 4);
 
             g.DrawRectangle(pen, _startPosX + 45, _startPosY - 35, 45, 29);
 
-             if (Phara)
-                 g.FillRectangle(unit, _startPosX + 80, _startPosY - 20, 10, 5);
-
+           
+            if (Phara)
+                g.FillRectangle(unit, _startPosX + 80, _startPosY - 20, 10, 5);
+            
         }
     }
 }

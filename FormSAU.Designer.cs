@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonLEFT = new System.Windows.Forms.Button();
             this.buttonRIGHT = new System.Windows.Forms.Button();
             this.buttonDOWN = new System.Windows.Forms.Button();
@@ -45,6 +46,16 @@
             this.pictureBox.Size = new System.Drawing.Size(800, 511);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Бронемашина";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.buttonCreateMilitaryVehicle);
             // 
             // buttonLEFT
             // 
@@ -88,9 +99,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(28, 12);
+            this.button2.Location = new System.Drawing.Point(112, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 23);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 7;
             this.button2.Text = "САУ";
             this.button2.UseVisualStyleBackColor = true;
@@ -106,6 +117,7 @@
             this.Controls.Add(this.buttonDOWN);
             this.Controls.Add(this.buttonRIGHT);
             this.Controls.Add(this.buttonLEFT);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox);
             this.Name = "FormSAU";
             this.Text = "MainForm";
@@ -117,6 +129,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonLEFT;
         private System.Windows.Forms.Button buttonRIGHT;
         private System.Windows.Forms.Button buttonDOWN;
