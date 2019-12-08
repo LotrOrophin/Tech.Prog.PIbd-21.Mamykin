@@ -33,7 +33,7 @@
             this.buttonRIGHT = new System.Windows.Forms.Button();
             this.buttonDOWN = new System.Windows.Forms.Button();
             this.buttonUP = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonCreate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,13 +88,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(28, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "САУ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.buttonCreateSAU);
+            this.buttonCreate.Location = new System.Drawing.Point(28, 12);
+            this.buttonCreate.Name = "button2";
+            this.buttonCreate.Size = new System.Drawing.Size(123, 23);
+            this.buttonCreate.TabIndex = 7;
+            this.buttonCreate.Text = "САУ";
+            this.buttonCreate.UseVisualStyleBackColor = true;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreateSAU);
             // 
             // FormSAU
             // 
@@ -121,7 +121,7 @@
         private System.Windows.Forms.Button buttonRIGHT;
         private System.Windows.Forms.Button buttonDOWN;
         private System.Windows.Forms.Button buttonUP;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonCreate;
     }
 }
 
