@@ -49,5 +49,6 @@ namespace WindowsFormsApp1
         public abstract void DrawCar(Graphics g);
         public abstract void MoveTransport(Direction direction);
     }
+
 }
 

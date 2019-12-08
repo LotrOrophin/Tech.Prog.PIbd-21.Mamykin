@@ -38,14 +38,14 @@
             this.groupBoxColor = new System.Windows.Forms.GroupBox();
             this.panelBlue = new System.Windows.Forms.Panel();
             this.panelGray = new System.Windows.Forms.Panel();
-            this.panelFunchsia = new System.Windows.Forms.Panel();
+            this.panelFuchsia = new System.Windows.Forms.Panel();
             this.panelGreen = new System.Windows.Forms.Panel();
             this.panelBluuue = new System.Windows.Forms.Panel();
             this.panelPurple = new System.Windows.Forms.Panel();
             this.panelYellow = new System.Windows.Forms.Panel();
             this.panelRed = new System.Windows.Forms.Panel();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIn)).BeginInit();
             this.groupBoxVehicle.SuspendLayout();
             this.panelColor.SuspendLayout();
@@ -134,7 +134,7 @@
             // 
             this.groupBoxColor.Controls.Add(this.panelBlue);
             this.groupBoxColor.Controls.Add(this.panelGray);
-            this.groupBoxColor.Controls.Add(this.panelFunchsia);
+            this.groupBoxColor.Controls.Add(this.panelFuchsia);
             this.groupBoxColor.Controls.Add(this.panelGreen);
             this.groupBoxColor.Controls.Add(this.panelBluuue);
             this.groupBoxColor.Controls.Add(this.panelPurple);
@@ -165,14 +165,14 @@
             this.panelGray.TabIndex = 2;
             this.panelGray.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
-            // panelFunchsia
+            // panelFuchsia
             // 
-            this.panelFunchsia.BackColor = System.Drawing.Color.Fuchsia;
-            this.panelFunchsia.Location = new System.Drawing.Point(6, 100);
-            this.panelFunchsia.Name = "panelFunchsia";
-            this.panelFunchsia.Size = new System.Drawing.Size(31, 27);
-            this.panelFunchsia.TabIndex = 2;
-            this.panelFunchsia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+            this.panelFuchsia.BackColor = System.Drawing.Color.Fuchsia;
+            this.panelFuchsia.Location = new System.Drawing.Point(6, 100);
+            this.panelFuchsia.Name = "panelFuchsia";
+            this.panelFuchsia.Size = new System.Drawing.Size(31, 27);
+            this.panelFuchsia.TabIndex = 2;
+            this.panelFuchsia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
             // panelGreen
             // 
@@ -229,22 +229,22 @@
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // buttonExit
+            // buttonClose
             // 
-            this.buttonExit.Location = new System.Drawing.Point(215, 276);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(147, 48);
-            this.buttonExit.TabIndex = 5;
-            this.buttonExit.Text = "Отмена";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonClose_Click);
+            this.buttonClose.Location = new System.Drawing.Point(215, 276);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(147, 48);
+            this.buttonClose.TabIndex = 5;
+            this.buttonClose.Text = "Отмена";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // FormCarConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1225, 555);
-            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.groupBoxColor);
             this.Controls.Add(this.panelColor);
@@ -269,7 +269,7 @@
         private System.Windows.Forms.GroupBox groupBoxColor;
         private System.Windows.Forms.Panel panelGreen;
         private System.Windows.Forms.Panel panelGray;
-        private System.Windows.Forms.Panel panelFunchsia;
+        private System.Windows.Forms.Panel panelFuchsia;
         private System.Windows.Forms.Panel panelBluuue;
         private System.Windows.Forms.Panel panelPurple;
         private System.Windows.Forms.Panel panelYellow;
@@ -278,6 +278,6 @@
         private System.Windows.Forms.Label labelDop;
         private System.Windows.Forms.Label labelBase;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonClose;
     }
 }
