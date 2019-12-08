@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1;
 
-namespace ProjectLabe
+namespace WindowsFormsApp1
 {
+    public delegate void carDelegate(ITransport car);
     static class Program
     {
         /// <summary>

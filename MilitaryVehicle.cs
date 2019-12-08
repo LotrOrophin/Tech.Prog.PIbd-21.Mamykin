@@ -8,7 +8,8 @@ using System.Drawing;
 namespace WindowsFormsApp1
 {
     class MilitaryVehicle : Vehicle
-    {       
+    {
+        
         public const int sauWidth = 100;
         public const int sauHeight = 150;
         public bool Phara { private set; get; }
@@ -67,6 +68,7 @@ namespace WindowsFormsApp1
 
             Brush unit = new SolidBrush(MainColor);
             g.FillRectangle(unit, _startPosX+5, _startPosY-25, 40, 19);
+
             Brush korpus = new SolidBrush(MainColor);
             g.FillRectangle(korpus, _startPosX + 45, _startPosY - 35, 25, 29);
             g.FillRectangle(korpus, _startPosX + 70, _startPosY - 27, 20, 21);
