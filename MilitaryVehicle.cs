@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
         
         public const int sauWidth = 100;
         public const int sauHeight = 150;
-        public bool Phara { private set; get; }
+        public bool Phara { protected set; get; }
 
         public MilitaryVehicle(int maxSpeed, float weight, Color mainColor, bool phara)
         {
@@ -20,6 +20,17 @@ namespace WindowsFormsApp1
             Weight = weight;
             MainColor = mainColor;
             Phara = phara;
+        }
+        public MilitaryVehicle(string info)
+        {
+            string[] strs = info.Split(';');
+            if (strs.Length == 4)
+            {
+                MaxSpeed = Convert.ToInt32(strs[0]);
+                Weight = Convert.ToInt32(strs[1]);
+                MainColor = Color.FromName(strs[2]);
+                Phara = Convert.ToBoolean(strs[3]);
+            }
         }
         public override void MoveTransport(Direction direction)
         {
@@ -83,6 +94,10 @@ namespace WindowsFormsApp1
             if (Phara)
                 g.FillRectangle(unit, _startPosX + 80, _startPosY - 20, 10, 5);
             
+        }
+        public override string ToString()
+        {
+            return MaxSpeed + ";" + Weight + ";" + MainColor.Name;
         }
     }
 }

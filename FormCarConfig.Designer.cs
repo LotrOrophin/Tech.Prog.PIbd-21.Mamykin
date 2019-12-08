@@ -38,13 +38,13 @@
             this.groupBoxColor = new System.Windows.Forms.GroupBox();
             this.panelBlue = new System.Windows.Forms.Panel();
             this.panelGray = new System.Windows.Forms.Panel();
-            this.panelPurple = new System.Windows.Forms.Panel();
+            this.panelFunchsia = new System.Windows.Forms.Panel();
             this.panelGreen = new System.Windows.Forms.Panel();
             this.panelBluuue = new System.Windows.Forms.Panel();
-            this.panelPuuurple = new System.Windows.Forms.Panel();
+            this.panelPurple = new System.Windows.Forms.Panel();
             this.panelYellow = new System.Windows.Forms.Panel();
             this.panelRed = new System.Windows.Forms.Panel();
-            this.buttonToAdd = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIn)).BeginInit();
             this.groupBoxVehicle.SuspendLayout();
@@ -134,10 +134,10 @@
             // 
             this.groupBoxColor.Controls.Add(this.panelBlue);
             this.groupBoxColor.Controls.Add(this.panelGray);
-            this.groupBoxColor.Controls.Add(this.panelPurple);
+            this.groupBoxColor.Controls.Add(this.panelFunchsia);
             this.groupBoxColor.Controls.Add(this.panelGreen);
             this.groupBoxColor.Controls.Add(this.panelBluuue);
-            this.groupBoxColor.Controls.Add(this.panelPuuurple);
+            this.groupBoxColor.Controls.Add(this.panelPurple);
             this.groupBoxColor.Controls.Add(this.panelYellow);
             this.groupBoxColor.Controls.Add(this.panelRed);
             this.groupBoxColor.Location = new System.Drawing.Point(43, 197);
@@ -165,14 +165,14 @@
             this.panelGray.TabIndex = 2;
             this.panelGray.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
-            // panelPurple
+            // panelFunchsia
             // 
-            this.panelPurple.BackColor = System.Drawing.Color.Fuchsia;
-            this.panelPurple.Location = new System.Drawing.Point(6, 100);
-            this.panelPurple.Name = "panelPurple";
-            this.panelPurple.Size = new System.Drawing.Size(31, 27);
-            this.panelPurple.TabIndex = 2;
-            this.panelPurple.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+            this.panelFunchsia.BackColor = System.Drawing.Color.Fuchsia;
+            this.panelFunchsia.Location = new System.Drawing.Point(6, 100);
+            this.panelFunchsia.Name = "panelFunchsia";
+            this.panelFunchsia.Size = new System.Drawing.Size(31, 27);
+            this.panelFunchsia.TabIndex = 2;
+            this.panelFunchsia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
             // panelGreen
             // 
@@ -192,14 +192,14 @@
             this.panelBluuue.TabIndex = 2;
             this.panelBluuue.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
-            // panelPuuurple
+            // panelPurple
             // 
-            this.panelPuuurple.BackColor = System.Drawing.Color.Purple;
-            this.panelPuuurple.Location = new System.Drawing.Point(7, 133);
-            this.panelPuuurple.Name = "panelPuuurple";
-            this.panelPuuurple.Size = new System.Drawing.Size(31, 27);
-            this.panelPuuurple.TabIndex = 2;
-            this.panelPuuurple.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+            this.panelPurple.BackColor = System.Drawing.Color.Purple;
+            this.panelPurple.Location = new System.Drawing.Point(7, 133);
+            this.panelPurple.Name = "panelPurple";
+            this.panelPurple.Size = new System.Drawing.Size(31, 27);
+            this.panelPurple.TabIndex = 2;
+            this.panelPurple.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
             // panelYellow
             // 
@@ -219,15 +219,15 @@
             this.panelRed.TabIndex = 0;
             this.panelRed.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
-            // buttonToAdd
+            // buttonAdd
             // 
-            this.buttonToAdd.Location = new System.Drawing.Point(215, 207);
-            this.buttonToAdd.Name = "buttonToAdd";
-            this.buttonToAdd.Size = new System.Drawing.Size(147, 49);
-            this.buttonToAdd.TabIndex = 4;
-            this.buttonToAdd.Text = "Добавить";
-            this.buttonToAdd.UseVisualStyleBackColor = true;
-            this.buttonToAdd.Click += new System.EventHandler(this.button1_Click);
+            this.buttonAdd.Location = new System.Drawing.Point(215, 207);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(147, 49);
+            this.buttonAdd.TabIndex = 4;
+            this.buttonAdd.Text = "Добавить";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonExit
             // 
@@ -237,6 +237,7 @@
             this.buttonExit.TabIndex = 5;
             this.buttonExit.Text = "Отмена";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // FormCarConfig
             // 
@@ -244,7 +245,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1225, 555);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.buttonToAdd);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.groupBoxColor);
             this.Controls.Add(this.panelColor);
             this.Controls.Add(this.groupBoxVehicle);
@@ -268,15 +269,15 @@
         private System.Windows.Forms.GroupBox groupBoxColor;
         private System.Windows.Forms.Panel panelGreen;
         private System.Windows.Forms.Panel panelGray;
-        private System.Windows.Forms.Panel panelPurple;
+        private System.Windows.Forms.Panel panelFunchsia;
         private System.Windows.Forms.Panel panelBluuue;
-        private System.Windows.Forms.Panel panelPuuurple;
+        private System.Windows.Forms.Panel panelPurple;
         private System.Windows.Forms.Panel panelYellow;
         private System.Windows.Forms.Panel panelBlue;
         private System.Windows.Forms.Panel panelRed;
         private System.Windows.Forms.Label labelDop;
         private System.Windows.Forms.Label labelBase;
-        private System.Windows.Forms.Button buttonToAdd;
+        private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonExit;
     }
 }

@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
         public Color DopColor { private set; get; }
 
         public bool DopKoleso { private set; get; }
+
         public SAU(int maxSpeed, float weight, Color mainColor, Color dopColor, bool dopKoleso, bool phara):
             base (maxSpeed, weight, mainColor, phara)
 
@@ -20,7 +21,18 @@ namespace WindowsFormsApp1
             DopColor = dopColor;
             DopKoleso = dopKoleso;
         }
-       
+        public SAU(string info) : base(info)
+        {
+            string[] strs = info.Split(';');
+            if (strs.Length == 5)
+            {
+                MaxSpeed = Convert.ToInt32(strs[0]);
+                Weight = Convert.ToInt32(strs[1]);
+                MainColor = Color.FromName(strs[2]);
+                DopColor = Color.FromName(strs[3]);
+                Phara = Convert.ToBoolean(strs[4]);
+            }
+        }
         public override void MoveTransport(Direction direction)
         {
             float step = MaxSpeed * 100 / Weight;
@@ -100,6 +112,10 @@ namespace WindowsFormsApp1
         public void SetDopColor(Color color)
         {
             DopColor = color;
+        }
+        public override string ToString()
+        {
+            return base.ToString() + ";" + DopColor.Name + ";" + DopKoleso;
         }
     }
 }

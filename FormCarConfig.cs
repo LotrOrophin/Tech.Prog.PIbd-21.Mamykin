@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
         public FormCarConfig()
         {
             InitializeComponent();
-            buttonToAdd.Click += (object sender, EventArgs e) => { Close(); };
+            buttonAdd.Click += (object sender, EventArgs e) => { Close(); };
         }
         /// <summary>
         /// Отрисовать машину
@@ -93,7 +93,7 @@ namespace WindowsFormsApp1
                     car = new MilitaryVehicle(100, 500, Color.White, false);
                     break;
                 case "САУ":
-                    car = new SAU(100, 500, Color.White, Color.Black, true, true);
+                    car = new SAU(100, 500, Color.White, Color.Black, false, false);
                     break;
             }
             DrawCar();
@@ -139,12 +139,13 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonAdd_Click(object sender, EventArgs e)
         {
             eventAddCar?.Invoke(car);
             Close();
         }
-        private void button2_Click(object sender, EventArgs e)
+
+        private void buttonClose_Click(object sender, EventArgs e)
         {
             Close();
         }

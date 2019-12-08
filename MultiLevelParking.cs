@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,14 +17,16 @@ namespace WindowsFormsApp1
         /// Сколько мест на каждом уровне
         /// </summary>
         private const int countPlaces = 20;
+        private int pictureWidth;
         /// <summary>
-        /// Конструктор
+        /// Высота окна отрисовки
         /// </summary>
-        /// <param name="countStages">Количество уровенй парковки</param>
-        /// <param name="pictureWidth"></param>
-        /// <param name="pictureHeight"></param>
+        private int pictureHeight;
+
         public MultiLevelParking(int countStages, int pictureWidth, int pictureHeight)
         {
+            this.pictureWidth = pictureWidth;
+            this.pictureHeight = pictureHeight;
             parkingStages = new List<Garage<ITransport>>();
             for (int i = 0; i < countStages; ++i)
             {
@@ -46,6 +49,103 @@ namespace WindowsFormsApp1
                 }
                 return null;
             }
+        }
+        public bool SaveData(string filename)
+        {
+            if (File.Exists(filename))
+            {
+                File.Delete(filename);
+            }
+            using (StreamWriter sw = new StreamWriter(filename))
+            {
+                sw.WriteLine("CountLeveles:" + parkingStages.Count);
+                foreach (var level in parkingStages)
+                {
+                    sw.WriteLine("Level");
+                    for (int i = 0; i < countPlaces; i++)
+                    {
+                        var car = level[i];
+                        if (car != null)
+                        {   
+                            if (car.GetType().Name == "MilitaryVehicle")
+                            {
+                                sw.Write(i + ":MilitaryVehicle:");
+                            }
+                            if (car.GetType().Name == "SAU")
+                            {
+                                sw.Write(i + ":SAU:");
+                            }
+                            sw.WriteLine(car);
+                        }
+                    }
+                }
+                return true;
+            }
+        }
+        /// <summary>
+        /// Метод записи информации в файл
+        /// </summary>
+        /// <param name="text">Строка, которую следует записать</param>
+        /// <param name="stream">Поток для записи</param>
+        private void WriteToFile(string text, FileStream stream)
+        {
+            byte[] info = new UTF8Encoding(true).GetBytes(text);
+            stream.Write(info, 0, info.Length);
+        }
+        /// <summary>
+        /// Загрузка нформации по автомобилям на парковках из файла
+        /// </summary>
+        /// <param name="filename"></param>
+        /// <returns></returns>
+        public bool LoadData(string filename)
+        {
+            if (!File.Exists(filename))
+            {
+                return false;
+            }
+            string buffer = "";
+            using (StreamReader sr = new StreamReader(filename))
+            {
+                if ((buffer = sr.ReadLine()).Contains("CountLeveles"))
+                {
+                    int count = Convert.ToInt32(buffer.Split(':')[1]);
+                    if (parkingStages != null)
+                    {
+                        parkingStages.Clear();
+                    }
+                    parkingStages = new List<Garage<ITransport>>(count);
+                }
+                else
+                {
+                    return false;
+                }
+                int counter = -1;
+                ITransport car = null;
+                while ((buffer = sr.ReadLine()) != null)
+                {
+                    if (buffer == "Level")
+                    {
+                        counter++;
+                        parkingStages.Add(new Garage<ITransport>(countPlaces, pictureWidth, pictureHeight));
+                        continue;
+                    }
+                    if (string.IsNullOrEmpty(buffer))
+                    {
+                        continue;
+                    }
+                    if (buffer.Split(':')[1] == "MilitaryVehicle")
+                    {
+                        Console.WriteLine(buffer.Split(':')[2]);
+                        car = new MilitaryVehicle(buffer.Split(':')[2]);
+                    }
+                    else if (buffer.Split(':')[1] == "SAU")
+                    {
+                        car = new SAU(buffer.Split(':')[2]);
+                    }
+                    parkingStages[counter][Convert.ToInt32(buffer.Split(':')[0])] = car;
+                }
+            }
+            return true;
         }
     }
 }
