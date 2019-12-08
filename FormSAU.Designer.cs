@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonVehicle = new System.Windows.Forms.Button();
             this.buttonLEFT = new System.Windows.Forms.Button();
             this.buttonRIGHT = new System.Windows.Forms.Button();
             this.buttonDOWN = new System.Windows.Forms.Button();
             this.buttonUP = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonSAU = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,15 +47,15 @@
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             // 
-            // button1
+            // buttonVehicle
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Бронемашина";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.buttonCreateMilitaryVehicle);
+            this.buttonVehicle.Location = new System.Drawing.Point(12, 12);
+            this.buttonVehicle.Name = "buttonVehicle";
+            this.buttonVehicle.Size = new System.Drawing.Size(94, 23);
+            this.buttonVehicle.TabIndex = 1;
+            this.buttonVehicle.Text = "Бронемашина";
+            this.buttonVehicle.UseVisualStyleBackColor = true;
+            this.buttonVehicle.Click += new System.EventHandler(this.buttonCreateMilitaryVehicle);
             // 
             // buttonLEFT
             // 
@@ -97,27 +97,27 @@
             this.buttonUP.UseVisualStyleBackColor = true;
             this.buttonUP.Click += new System.EventHandler(this.buttonMove_Click);
             // 
-            // button2
+            // buttonSAU
             // 
-            this.button2.Location = new System.Drawing.Point(112, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "САУ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.buttonCreateSAU);
+            this.buttonSAU.Location = new System.Drawing.Point(112, 12);
+            this.buttonSAU.Name = "buttonSAU";
+            this.buttonSAU.Size = new System.Drawing.Size(75, 23);
+            this.buttonSAU.TabIndex = 7;
+            this.buttonSAU.Text = "САУ";
+            this.buttonSAU.UseVisualStyleBackColor = true;
+            this.buttonSAU.Click += new System.EventHandler(this.buttonCreateSAU);
             // 
             // FormSAU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 511);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonSAU);
             this.Controls.Add(this.buttonUP);
             this.Controls.Add(this.buttonDOWN);
             this.Controls.Add(this.buttonRIGHT);
             this.Controls.Add(this.buttonLEFT);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonVehicle);
             this.Controls.Add(this.pictureBox);
             this.Name = "FormSAU";
             this.Text = "MainForm";
@@ -129,12 +129,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonVehicle;
         private System.Windows.Forms.Button buttonLEFT;
         private System.Windows.Forms.Button buttonRIGHT;
         private System.Windows.Forms.Button buttonDOWN;
         private System.Windows.Forms.Button buttonUP;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonSAU;
     }
 }
 
