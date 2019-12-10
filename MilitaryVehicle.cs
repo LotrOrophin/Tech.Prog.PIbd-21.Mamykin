@@ -79,7 +79,6 @@ namespace WindowsFormsApp1
 
             Brush unit = new SolidBrush(MainColor);
             g.FillRectangle(unit, _startPosX+5, _startPosY-25, 40, 19);
-
             Brush korpus = new SolidBrush(MainColor);
             g.FillRectangle(korpus, _startPosX + 45, _startPosY - 35, 25, 29);
             g.FillRectangle(korpus, _startPosX + 70, _startPosY - 27, 20, 21);
@@ -87,7 +86,6 @@ namespace WindowsFormsApp1
 
             Brush pushka = new SolidBrush(Color.Black);            
             g.FillEllipse(koleso, _startPosX, _startPosY - 10, 90, 4);
-
             g.DrawRectangle(pen, _startPosX + 45, _startPosY - 35, 45, 29);           
             if (Phara)
                 g.FillRectangle(unit, _startPosX + 80, _startPosY - 20, 10, 5);
