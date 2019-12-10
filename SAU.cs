@@ -80,13 +80,13 @@ namespace WindowsFormsApp1
             Brush pushka = new SolidBrush(Color.Black);
             int i = 0;
             while (i < 7) { 
-            g.DrawLine(pen, _startPosX + 14+i, _startPosY - 25, _startPosX + 40+i, _startPosY - 90);
+            g.DrawLine(pen, _startPosX + 14+i, _startPosY - 25, _startPosX + 40+i, _startPosY - 60);
                 i++;
             }
             i = 0;
             while (i < 7)
             {
-                g.DrawLine(pen, _startPosX + 26 + i, _startPosY - 25, _startPosX + 52 + i, _startPosY - 90);
+                g.DrawLine(pen, _startPosX + 26 + i, _startPosY - 25, _startPosX + 52 + i, _startPosY - 60);
                 i++;
             }
             

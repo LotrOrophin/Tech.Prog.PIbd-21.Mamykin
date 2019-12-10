@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
 
 namespace ProjectLabe
 {
@@ -16,7 +17,7 @@ namespace ProjectLabe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSAU());
+            Application.Run(new FormParkingSAU());
         }
     }
 }
