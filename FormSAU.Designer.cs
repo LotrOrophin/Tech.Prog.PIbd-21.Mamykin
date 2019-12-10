@@ -1,3 +1,4 @@
+
 ﻿namespace ProjectLabe
 {
     partial class FormSAU
@@ -137,4 +138,3 @@
         private System.Windows.Forms.Button button2;
     }
 }
-

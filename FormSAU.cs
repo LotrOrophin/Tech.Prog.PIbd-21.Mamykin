@@ -19,7 +19,6 @@ namespace ProjectLabe
         {
             InitializeComponent();
         }
-
        
         private void Draw()
         {
@@ -34,7 +33,8 @@ namespace ProjectLabe
             sau = new MilitaryVehicle(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue,false);
             sau.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBox.Width,
            pictureBox.Height);
-            Draw();
+            Draw();
+
         }
         private void buttonMove_Click(object sender, EventArgs e)
         {

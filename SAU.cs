@@ -13,13 +13,10 @@ namespace WindowsFormsApp1
         public Color DopColor { private set; get; }
 
         public bool DopKoleso { private set; get; }
+        public bool Phara { private set; get; }
 
-
-    
-
-        public SAU(int maxSpeed, float weight, Color mainColor, Color dopColor, bool dopKoleso, bool phara):
+       public SAU(int maxSpeed, float weight, Color mainColor, Color dopColor, bool dopKoleso, bool phara):
             base (maxSpeed, weight, mainColor, phara)
-
         {
             DopColor = dopColor;
             DopKoleso = dopKoleso;
@@ -72,12 +69,8 @@ namespace WindowsFormsApp1
                 g.FillEllipse(koleso, _startPosX + 24, _startPosY - 13, 20, 20);
             g.FillEllipse(koleso, _startPosX + 67, _startPosY - 13, 20, 20);
 
-
-
-
             Brush unit = new SolidBrush(DopColor);
             g.FillRectangle(unit, _startPosX + 5, _startPosY - 25, 40, 19);
-           // g.FillEllipse(unit, _startPosX + 12, _startPosY - 100, 22, 20);
 
             Brush korpus = new SolidBrush(MainColor);
             g.FillRectangle(korpus, _startPosX + 45, _startPosY - 35, 25, 29);
@@ -85,7 +78,6 @@ namespace WindowsFormsApp1
             g.FillRectangle(korpus, _startPosX + 10, _startPosY - 33, 28, 10);
 
             Brush pushka = new SolidBrush(Color.Black);
-            //g.FillRectangle(pushka, _startPosX + 14, _startPosY - 90, 20, 65);
             int i = 0;
             while (i < 7) { 
             g.DrawLine(pen, _startPosX + 14+i, _startPosY - 25, _startPosX + 40+i, _startPosY - 60);
