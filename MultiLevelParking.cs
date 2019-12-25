@@ -63,30 +63,22 @@ namespace WindowsFormsApp1
                 foreach (var level in parkingStages)
                 {
                     sw.WriteLine("Level");
-                    for (int i = 0; i < countPlaces; i++)
+                    foreach (ITransport car in level)
                     {
-                        try
-                        {
-                            var car = level[i];
-                            if (car != null)
+                        if (car.GetType().Name == "MilitaryVehicle")
                             {
-                                if (car.GetType().Name == "MilitaryVehicle")
-                                {
-                                    sw.Write(i + ":MilitaryVehicle:");
-                                }
-                                if (car.GetType().Name == "SAU")
-                                {
-                                    sw.Write(i + ":SAU:");
-                                }
-                                sw.WriteLine(car);
+                            sw.Write(level.GetKey + ":MilitaryVehicle:");
                             }
+                        if (car.GetType().Name == "SAU")
+                            {
+                             sw.Write(level.GetKey + ":SAU:");
+                            }
+                         sw.WriteLine(car);
                         }
-                        finally { }
                     }
                 }
                 return true;
             }
-        }
         /// <summary>
         /// Метод записи информации в файл
         /// </summary>
@@ -154,6 +146,14 @@ namespace WindowsFormsApp1
             }
             return true;
         }
+        /// <summary>
+        /// Сортировка уровней
+        /// </summary>
+        public void Sort()
+        {
+            parkingStages.Sort();
+        }
+
     }
 }
     
