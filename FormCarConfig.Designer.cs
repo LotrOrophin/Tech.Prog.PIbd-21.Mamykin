@@ -227,7 +227,7 @@
             this.buttonToAdd.TabIndex = 4;
             this.buttonToAdd.Text = "Добавить";
             this.buttonToAdd.UseVisualStyleBackColor = true;
-            this.buttonToAdd.Click += new System.EventHandler(this.button1_Click);
+            this.buttonToAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonExit
             // 
@@ -237,6 +237,7 @@
             this.buttonExit.TabIndex = 5;
             this.buttonExit.Text = "Отмена";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // FormCarConfig
             // 
