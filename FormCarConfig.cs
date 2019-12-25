@@ -144,7 +144,7 @@ namespace WindowsFormsApp1
             eventAddCar?.Invoke(car);
             Close();
         }
-
+        
         private void buttonClose_Click(object sender, EventArgs e)
         {
             Close();
