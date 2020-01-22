@@ -13,10 +13,9 @@ namespace WindowsFormsApp1
         public Color DopColor { private set; get; }
 
         public bool DopKoleso { private set; get; }
-
+        
         public SAU(int maxSpeed, float weight, Color mainColor, Color dopColor, bool dopKoleso, bool phara):
             base (maxSpeed, weight, mainColor, phara)
-
         {
             DopColor = dopColor;
             DopKoleso = dopKoleso;
@@ -33,8 +32,6 @@ namespace WindowsFormsApp1
                 Phara = Convert.ToBoolean(strs[4]);
             }
         }
-
-
         public override void MoveTransport(Direction direction)
         {
             float step = MaxSpeed * 100 / Weight;
