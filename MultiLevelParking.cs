@@ -153,6 +153,5 @@ namespace WindowsFormsApp1
         {
             parkingStages.Sort();
         }
-
     }
 }    
