@@ -32,7 +32,6 @@ namespace WindowsFormsApp1
                 Phara = Convert.ToBoolean(strs[4]);
             }
         }
-
         public override void MoveTransport(Direction direction)
         {
             float step = MaxSpeed * 100 / Weight;
