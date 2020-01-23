@@ -134,7 +134,7 @@
             // 
             this.groupBoxColor.Controls.Add(this.panelBlue);
             this.groupBoxColor.Controls.Add(this.panelGray);
-            this.groupBoxColor.Controls.Add(this.panelPuuurple);
+            this.groupBoxColor.Controls.Add(this.panelPurple);
             this.groupBoxColor.Controls.Add(this.panelGreen);
             this.groupBoxColor.Controls.Add(this.panelBluuue);
             this.groupBoxColor.Controls.Add(this.panelPurple);
