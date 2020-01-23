@@ -38,10 +38,10 @@
             this.groupBoxColor = new System.Windows.Forms.GroupBox();
             this.panelBlue = new System.Windows.Forms.Panel();
             this.panelGray = new System.Windows.Forms.Panel();
-            this.panelFunchsia = new System.Windows.Forms.Panel();
+            this.panelPurple = new System.Windows.Forms.Panel();
             this.panelGreen = new System.Windows.Forms.Panel();
             this.panelBluuue = new System.Windows.Forms.Panel();
-            this.panelPurple = new System.Windows.Forms.Panel();
+            this.panelPuuurple = new System.Windows.Forms.Panel();
             this.panelYellow = new System.Windows.Forms.Panel();
             this.panelRed = new System.Windows.Forms.Panel();
             this.buttonToAdd = new System.Windows.Forms.Button();
@@ -165,14 +165,14 @@
             this.panelGray.TabIndex = 2;
             this.panelGray.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
-            // panelFunchsia
+            // panelPurple
             // 
-            this.panelFunchsia.BackColor = System.Drawing.Color.Fuchsia;
-            this.panelFunchsia.Location = new System.Drawing.Point(6, 100);
-            this.panelFunchsia.Name = "panelFunchsia";
-            this.panelFunchsia.Size = new System.Drawing.Size(31, 27);
-            this.panelFunchsia.TabIndex = 2;
-            this.panelFunchsia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+            this.panelPurple.BackColor = System.Drawing.Color.Fuchsia;
+            this.panelPurple.Location = new System.Drawing.Point(6, 100);
+            this.panelPurple.Name = "panelPurple";
+            this.panelPurple.Size = new System.Drawing.Size(31, 27);
+            this.panelPurple.TabIndex = 2;
+            this.panelPurple.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
             // panelGreen
             // 
@@ -192,14 +192,14 @@
             this.panelBluuue.TabIndex = 2;
             this.panelBluuue.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
-            // panelPurple
+            // panelPuuurple
             // 
-            this.panelPurple.BackColor = System.Drawing.Color.Purple;
-            this.panelPurple.Location = new System.Drawing.Point(7, 133);
-            this.panelPurple.Name = "panelPurple";
-            this.panelPurple.Size = new System.Drawing.Size(31, 27);
-            this.panelPurple.TabIndex = 2;
-            this.panelPurple.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+            this.panelPuuurple.BackColor = System.Drawing.Color.Purple;
+            this.panelPuuurple.Location = new System.Drawing.Point(7, 133);
+            this.panelPuuurple.Name = "panelPuuurple";
+            this.panelPuuurple.Size = new System.Drawing.Size(31, 27);
+            this.panelPuuurple.TabIndex = 2;
+            this.panelPuuurple.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
             // panelYellow
             // 
@@ -269,9 +269,9 @@
         private System.Windows.Forms.GroupBox groupBoxColor;
         private System.Windows.Forms.Panel panelGreen;
         private System.Windows.Forms.Panel panelGray;
-        private System.Windows.Forms.Panel panelFunchsia;
-        private System.Windows.Forms.Panel panelBluuue;
         private System.Windows.Forms.Panel panelPurple;
+        private System.Windows.Forms.Panel panelBluuue;
+        private System.Windows.Forms.Panel panelPuuurple;
         private System.Windows.Forms.Panel panelYellow;
         private System.Windows.Forms.Panel panelBlue;
         private System.Windows.Forms.Panel panelRed;
