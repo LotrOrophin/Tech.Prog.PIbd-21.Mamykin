@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace WindowsFormsApp1
 {
-    class SAU : MilitaryVehicle
+    class SAU : MilitaryVehicle, IComparable<SAU>, IEquatable<SAU>
     {
         
         public Color DopColor { private set; get; }
@@ -116,5 +116,90 @@ namespace WindowsFormsApp1
         {
             return base.ToString() + ";" + DopColor.Name + ";" + DopKoleso;
         }
+        /// <summary>
+        /// Метод интерфейса IComparable для класса SportCar
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public int CompareTo(SAU other)
+        {
+            var res = (this is MilitaryVehicle).CompareTo(other is MilitaryVehicle);
+            if (res != 0)
+            {
+                return res;
+            }
+            if (DopColor != other.DopColor)
+            {
+                DopColor.Name.CompareTo(other.DopColor.Name);
+            }
+            if (DopKoleso != other.DopKoleso)
+            {
+                return DopKoleso.CompareTo(other.DopKoleso);
+            }
+            if (Phara != other.Phara)
+            {
+                return Phara.CompareTo(other.Phara);
+            }
+            return 0;
+        }
+        /// <summary>
+        /// Метод интерфейса IEquatable для класса SportCar
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(SAU other)
+        {
+            var res = (this as MilitaryVehicle).Equals(other as MilitaryVehicle);
+            if (!res)
+            {
+                return res;
+            }
+            if (GetType().Name != other.GetType().Name)
+            {
+                return false;
+            }
+            if (DopColor != other.DopColor)
+            {
+                return false;
+            }
+            if (DopKoleso != other.DopKoleso)
+            {
+                return false;
+            }
+             if (Phara != other.Phara)
+            {
+                return false;
+            }
+            return true;
+        }
+        /// <summary>
+        /// Перегрузка метода от object
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(Object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            if (!(obj is SAU MilitaryVehicleObj))
+            {
+                return false;
+            }
+            else
+            {
+                return Equals(MilitaryVehicleObj);
+            }
+        }
+        /// <summary>
+        /// Перегрузка метода от object
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
     }
 }
