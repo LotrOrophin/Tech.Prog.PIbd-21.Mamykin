@@ -38,10 +38,10 @@
             this.groupBoxColor = new System.Windows.Forms.GroupBox();
             this.panelBlue = new System.Windows.Forms.Panel();
             this.panelGray = new System.Windows.Forms.Panel();
-            this.panelFuchsia = new System.Windows.Forms.Panel();
+            this.panelPurple = new System.Windows.Forms.Panel();
             this.panelGreen = new System.Windows.Forms.Panel();
             this.panelBluuue = new System.Windows.Forms.Panel();
-            this.panelPurple = new System.Windows.Forms.Panel();
+            this.panelPuuurple = new System.Windows.Forms.Panel();
             this.panelYellow = new System.Windows.Forms.Panel();
             this.panelRed = new System.Windows.Forms.Panel();
             this.buttonAdd = new System.Windows.Forms.Button();
