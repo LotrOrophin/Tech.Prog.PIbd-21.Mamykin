@@ -86,12 +86,9 @@ namespace WindowsFormsApp1
 
             Brush pushka = new SolidBrush(Color.Black);            
             g.FillEllipse(koleso, _startPosX, _startPosY - 10, 90, 4);
-
-            g.DrawRectangle(pen, _startPosX + 45, _startPosY - 35, 45, 29);
-          
+            g.DrawRectangle(pen, _startPosX + 45, _startPosY - 35, 45, 29);           
             if (Phara)
-                g.FillRectangle(unit, _startPosX + 80, _startPosY - 20, 10, 5);
-            
+                g.FillRectangle(unit, _startPosX + 80, _startPosY - 20, 10, 5);            
         }
         public override string ToString()
         {

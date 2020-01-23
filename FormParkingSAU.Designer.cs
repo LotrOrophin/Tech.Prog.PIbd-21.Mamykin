@@ -55,13 +55,13 @@ namespace WindowsFormsApp1
             // 
             this.pictureBoxParking.Location = new System.Drawing.Point(13, 41);
             this.pictureBoxParking.Name = "pictureBoxParking";
-            this.pictureBoxParking.Size = new System.Drawing.Size(659, 397);
+            this.pictureBoxParking.Size = new System.Drawing.Size(839, 397);
             this.pictureBoxParking.TabIndex = 0;
             this.pictureBoxParking.TabStop = false;
             // 
             // buttonTakeCar
             // 
-            this.buttonTakeCar.Location = new System.Drawing.Point(691, 180);
+            this.buttonTakeCar.Location = new System.Drawing.Point(895, 182);
             this.buttonTakeCar.Name = "buttonTakeCar";
             this.buttonTakeCar.Size = new System.Drawing.Size(97, 85);
             this.buttonTakeCar.TabIndex = 2;
@@ -71,7 +71,7 @@ namespace WindowsFormsApp1
             // 
             // buttonTakeVehicle
             // 
-            this.buttonTakeVehicle.Location = new System.Drawing.Point(691, 404);
+            this.buttonTakeVehicle.Location = new System.Drawing.Point(895, 415);
             this.buttonTakeVehicle.Name = "buttonTakeVehicle";
             this.buttonTakeVehicle.Size = new System.Drawing.Size(75, 23);
             this.buttonTakeVehicle.TabIndex = 3;
@@ -82,7 +82,7 @@ namespace WindowsFormsApp1
             // labelVehicle
             // 
             this.labelVehicle.AutoSize = true;
-            this.labelVehicle.Location = new System.Drawing.Point(678, 268);
+            this.labelVehicle.Location = new System.Drawing.Point(882, 270);
             this.labelVehicle.Name = "labelVehicle";
             this.labelVehicle.Size = new System.Drawing.Size(110, 13);
             this.labelVehicle.TabIndex = 4;
@@ -91,7 +91,7 @@ namespace WindowsFormsApp1
             // labelPlace
             // 
             this.labelPlace.AutoSize = true;
-            this.labelPlace.Location = new System.Drawing.Point(678, 290);
+            this.labelPlace.Location = new System.Drawing.Point(882, 290);
             this.labelPlace.Name = "labelPlace";
             this.labelPlace.Size = new System.Drawing.Size(42, 13);
             this.labelPlace.TabIndex = 5;
@@ -99,14 +99,14 @@ namespace WindowsFormsApp1
             // 
             // maskedTextBox
             // 
-            this.maskedTextBox.Location = new System.Drawing.Point(726, 287);
+            this.maskedTextBox.Location = new System.Drawing.Point(931, 290);
             this.maskedTextBox.Name = "maskedTextBox";
             this.maskedTextBox.Size = new System.Drawing.Size(61, 20);
             this.maskedTextBox.TabIndex = 6;
             // 
             // pictureBoxTakeVehicle
             // 
-            this.pictureBoxTakeVehicle.Location = new System.Drawing.Point(681, 313);
+            this.pictureBoxTakeVehicle.Location = new System.Drawing.Point(885, 316);
             this.pictureBoxTakeVehicle.Name = "pictureBoxTakeVehicle";
             this.pictureBoxTakeVehicle.Size = new System.Drawing.Size(100, 85);
             this.pictureBoxTakeVehicle.TabIndex = 7;
@@ -115,7 +115,7 @@ namespace WindowsFormsApp1
             // listBoxLevels
             // 
             this.listBoxLevels.FormattingEnabled = true;
-            this.listBoxLevels.Location = new System.Drawing.Point(681, 13);
+            this.listBoxLevels.Location = new System.Drawing.Point(872, 12);
             this.listBoxLevels.Name = "listBoxLevels";
             this.listBoxLevels.Size = new System.Drawing.Size(120, 95);
             this.listBoxLevels.TabIndex = 8;
@@ -123,7 +123,7 @@ namespace WindowsFormsApp1
             // 
             // buttonTo
             // 
-            this.buttonTo.Location = new System.Drawing.Point(681, 115);
+            this.buttonTo.Location = new System.Drawing.Point(885, 117);
             this.buttonTo.Name = "buttonTo";
             this.buttonTo.Size = new System.Drawing.Size(49, 59);
             this.buttonTo.TabIndex = 9;
@@ -132,7 +132,7 @@ namespace WindowsFormsApp1
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(736, 115);
+            this.buttonBack.Location = new System.Drawing.Point(940, 117);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(52, 59);
             this.buttonBack.TabIndex = 10;
@@ -146,7 +146,7 @@ namespace WindowsFormsApp1
             this.файлToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1004, 24);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -162,14 +162,14 @@ namespace WindowsFormsApp1
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
             // загрузитьToolStripMenuItem
             // 
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.загрузитьToolStripMenuItem.Text = "Загрузить";
             this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
             // 
@@ -177,7 +177,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1004, 450);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonTo);
             this.Controls.Add(this.listBoxLevels);

@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
         {
             if (p._places.Count == p._maxCount)
             {
-                return -1;
+                throw new ParkingOverflowException();
             }
             for (int i = 0; i < p._maxCount; i++)
             {
@@ -75,7 +75,7 @@ namespace WindowsFormsApp1
                 p._places.Remove(index);
                 return car;
             }
-            return null;
+            throw new ParkingNotFoundException(index);
         }
 
         private bool CheckFreePlace(int index)
@@ -131,6 +131,10 @@ namespace WindowsFormsApp1
                     _places.Add(ind, value);
                     _places[ind].SetPosition(5 + ind / 5 * _placeSizeWidth + 5, ind % 5 *
                     _placeSizeHeight + 72, PictureWidth, PictureHeight);
+                }
+                else
+                {
+                    throw new ParkingOccupiedPlaceException(ind);
                 }
             }
         }
