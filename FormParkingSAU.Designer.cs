@@ -138,6 +138,7 @@ namespace WindowsFormsApp1
             this.buttonBack.TabIndex = 10;
             this.buttonBack.Text = ")))))";
             this.buttonBack.UseVisualStyleBackColor = true;
+
             // 
             // menuStrip1
             // 
