@@ -77,7 +77,7 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Draw();
         }
