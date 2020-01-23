@@ -8,14 +8,13 @@ using System.Drawing;
 namespace WindowsFormsApp1
 {
     class SAU : MilitaryVehicle
-    {
-        
+    {       
         public Color DopColor { private set; get; }
 
         public bool DopKoleso { private set; get; }
         public bool Phara { private set; get; }
 
-       public SAU(int maxSpeed, float weight, Color mainColor, Color dopColor, bool dopKoleso, bool phara):
+        public SAU(int maxSpeed, float weight, Color mainColor, Color dopColor, bool dopKoleso, bool phara):
             base (maxSpeed, weight, mainColor, phara)
         {
             DopColor = dopColor;

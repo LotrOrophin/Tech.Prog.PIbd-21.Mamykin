@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp1
+﻿using System;
+
+namespace WindowsFormsApp1
 {
     partial class FormParkingSAU
     {
@@ -30,12 +32,13 @@
         {
             this.pictureBoxParking = new System.Windows.Forms.PictureBox();
             this.buttonToPark = new System.Windows.Forms.Button();
-            this.buttonToParkS = new System.Windows.Forms.Button();
+            this.buttonToParkVehicle = new System.Windows.Forms.Button();
             this.buttonTakeVehicle = new System.Windows.Forms.Button();
             this.labelText = new System.Windows.Forms.Label();
             this.labelPlace = new System.Windows.Forms.Label();
             this.maskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.pictureBoxTakeVehicle = new System.Windows.Forms.PictureBox();
+            this.listBoxLevels = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxParking)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTakeVehicle)).BeginInit();
             this.SuspendLayout();
@@ -50,23 +53,23 @@
             // 
             // buttonToPark
             // 
-            this.buttonToPark.Location = new System.Drawing.Point(691, 13);
+            this.buttonToPark.Location = new System.Drawing.Point(691, 161);
             this.buttonToPark.Name = "buttonToPark";
-            this.buttonToPark.Size = new System.Drawing.Size(75, 92);
+            this.buttonToPark.Size = new System.Drawing.Size(75, 36);
             this.buttonToPark.TabIndex = 1;
             this.buttonToPark.Text = "Припарковать САУ";
             this.buttonToPark.UseVisualStyleBackColor = true;
             this.buttonToPark.Click += new System.EventHandler(this.buttonSetCar_Click);
             // 
-            // buttonToParkS
+            // buttonToParkVehicle
             // 
-            this.buttonToParkS.Location = new System.Drawing.Point(691, 111);
-            this.buttonToParkS.Name = "buttonToParkS";
-            this.buttonToParkS.Size = new System.Drawing.Size(75, 92);
-            this.buttonToParkS.TabIndex = 2;
-            this.buttonToParkS.Text = "Припарковать бронемашину";
-            this.buttonToParkS.UseVisualStyleBackColor = true;
-            this.buttonToParkS.Click += new System.EventHandler(this.buttonSetSAU_Click);
+            this.buttonToParkVehicle.Location = new System.Drawing.Point(691, 203);
+            this.buttonToParkVehicle.Name = "buttonToParkVehicle";
+            this.buttonToParkVehicle.Size = new System.Drawing.Size(75, 62);
+            this.buttonToParkVehicle.TabIndex = 2;
+            this.buttonToParkVehicle.Text = "Припарковать бронемашину";
+            this.buttonToParkVehicle.UseVisualStyleBackColor = true;
+            this.buttonToParkVehicle.Click += new System.EventHandler(this.buttonSetSAU_Click);
             // 
             // buttonTakeVehicle
             // 
@@ -111,17 +114,27 @@
             this.pictureBoxTakeVehicle.TabIndex = 7;
             this.pictureBoxTakeVehicle.TabStop = false;
             // 
+            // listBoxLevels
+            // 
+            this.listBoxLevels.FormattingEnabled = true;
+            this.listBoxLevels.Location = new System.Drawing.Point(681, 13);
+            this.listBoxLevels.Name = "listBoxLevels";
+            this.listBoxLevels.Size = new System.Drawing.Size(120, 95);
+            this.listBoxLevels.TabIndex = 8;
+            this.listBoxLevels.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
+            // 
             // FormParkingSAU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBoxLevels);
             this.Controls.Add(this.pictureBoxTakeVehicle);
             this.Controls.Add(this.maskedTextBox);
             this.Controls.Add(this.labelPlace);
             this.Controls.Add(this.labelText);
             this.Controls.Add(this.buttonTakeVehicle);
-            this.Controls.Add(this.buttonToParkS);
+            this.Controls.Add(this.buttonToParkVehicle);
             this.Controls.Add(this.buttonToPark);
             this.Controls.Add(this.pictureBoxParking);
             this.Name = "FormParkingSAU";
@@ -137,11 +150,12 @@
 
         private System.Windows.Forms.PictureBox pictureBoxParking;
         private System.Windows.Forms.Button buttonToPark;
-        private System.Windows.Forms.Button buttonToParkS;
+        private System.Windows.Forms.Button buttonToParkVehicle;
         private System.Windows.Forms.Button buttonTakeVehicle;
         private System.Windows.Forms.Label labelText;
         private System.Windows.Forms.Label labelPlace;
         private System.Windows.Forms.MaskedTextBox maskedTextBox;
         private System.Windows.Forms.PictureBox pictureBoxTakeVehicle;
+        private System.Windows.Forms.ListBox listBoxLevels;
     }
 }
