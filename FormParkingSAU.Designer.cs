@@ -112,7 +112,7 @@ namespace WindowsFormsApp1
             this.listBoxLevels.Name = "listBoxLevels";
             this.listBoxLevels.Size = new System.Drawing.Size(120, 95);
             this.listBoxLevels.TabIndex = 8;
-            this.listBoxLevels.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBoxLevels.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
             // buttonTo
             // 
