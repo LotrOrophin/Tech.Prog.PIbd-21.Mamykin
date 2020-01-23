@@ -8,12 +8,12 @@ using System.Drawing;
 namespace WindowsFormsApp1
 {
     class SAU : MilitaryVehicle
-    {       
+    {
+        
         public Color DopColor { private set; get; }
 
         public bool DopKoleso { private set; get; }
-        public bool Phara { private set; get; }
-
+        
         public SAU(int maxSpeed, float weight, Color mainColor, Color dopColor, bool dopKoleso, bool phara):
             base (maxSpeed, weight, mainColor, phara)
         {
@@ -96,6 +96,10 @@ namespace WindowsFormsApp1
              if (Phara)
                  g.FillRectangle(unit, _startPosX + 80, _startPosY - 20, 10, 5);
 
+        }
+        public void SetDopColor(Color color)
+        {
+            DopColor = color;
         }
     }
 }

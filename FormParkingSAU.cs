@@ -10,13 +10,15 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class FormParkingSAU : Form
+    public partial class FormParkingSAU : Form  
     {
 
         /// <summary>
         /// Объект от класса-парковки
         /// </summary>
         MultiLevelParking parking;
+        FormCarConfig form;
+
         private const int countLevel = 5;
  
         public FormParkingSAU()
@@ -31,9 +33,6 @@ namespace WindowsFormsApp1
             }
             listBoxLevels.SelectedIndex = 0;
         }
-        /// <summary>
-        /// Метод отрисовки парковки
-        /// </summary>
         private void Draw()
         {
             if (listBoxLevels.SelectedIndex > -1)
@@ -45,60 +44,7 @@ namespace WindowsFormsApp1
                 pictureBoxParking.Image = bmp;
             }
         }
-
-        /// <summary>
-        /// Обработка нажатия кнопки "Припарковать автомобиль"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void buttonSetCar_Click(object sender, EventArgs e)
-        {
-            if (listBoxLevels.SelectedIndex > -1)
-            {
-                ColorDialog dialog = new ColorDialog();
-                if (dialog.ShowDialog() == DialogResult.OK)
-                {
-                    var car = new MilitaryVehicle(100, 1000, dialog.Color, true);
-                    int place = parking[listBoxLevels.SelectedIndex] + car;
-                    if (place == -1)
-                    {
-                        MessageBox.Show("Нет свободных мест", "Ошибка",
-                       MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    Draw();
-                }
-            }
-        }
-
-        /// <summary>
-        /// Обработка нажатия кнопки "Припарковать гоночный автомобиль"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void buttonSetSAU_Click(object sender, EventArgs e)
-        {
-            if (listBoxLevels.SelectedIndex > -1)
-            {
-                ColorDialog dialog = new ColorDialog();
-                if (dialog.ShowDialog() == DialogResult.OK)
-                {
-                    ColorDialog dialogDop = new ColorDialog();
-                    if (dialogDop.ShowDialog() == DialogResult.OK)
-                    {
-                        var car = new SAU(100, 1000, dialog.Color, dialogDop.Color,
-                       true, true);
-                        int place = parking[listBoxLevels.SelectedIndex] + car;
-                        if (place == -1)
-                        {
-                            MessageBox.Show("Нет свободных мест", "Ошибка",
-                           MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        Draw();
-                    }
-                }
-            }
-        }
-        private void buttonTakeVehicle_Click(object sender, EventArgs e)
+        private void buttonTakeCar_Click(object sender, EventArgs e)
         {
             if (listBoxLevels.SelectedIndex > -1)
             {
@@ -117,9 +63,9 @@ namespace WindowsFormsApp1
                         pictureBoxTakeVehicle.Image = bmp;
                     }
                     else
-                    {
+                    {   
                         Bitmap bmp = new Bitmap(pictureBoxTakeVehicle.Width,
-                       pictureBoxTakeVehicle.Height);
+                       pictureBoxTakeVehicle.Height);   
                         pictureBoxTakeVehicle.Image = bmp;
                     }
                     Draw();
@@ -134,6 +80,28 @@ namespace WindowsFormsApp1
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Draw();
+        }
+        private void buttonSetCar_Click(object sender, EventArgs e)
+        {
+            form = new FormCarConfig();
+            form.AddEvent(AddCar);
+            form.Show();
+        }
+
+        private void AddCar(ITransport car)
+        {
+            if (car != null && listBoxLevels.SelectedIndex > -1)
+            {
+                int place = parking[listBoxLevels.SelectedIndex] + car;
+                if (place > -1)
+                {
+                    Draw();
+                }
+                else
+                {
+                    MessageBox.Show("Машину не удалось поставить");
+                }
+            }
         }
     }
 }
