@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
                 {
                     p._places.Add(i, car);
                     p._places[i].SetPosition(5 + i / 5 * p._placeSizeWidth + 5,
-                     i % 5 * p._placeSizeHeight + 72, p.PictureWidth,
+                     i % 5 * p._placeSizeHeight+72, p.PictureWidth,
                     p.PictureHeight);
                     return i;
                 }
@@ -114,7 +114,25 @@ namespace WindowsFormsApp1
                 g.DrawLine(pen, i * _placeSizeWidth, 0, i * _placeSizeWidth, 400);
             }
         }
+        public T this[int ind]
+        {
+            get
+            {
+                if (_places.ContainsKey(ind))
+                {
+                    return _places[ind];
+                }
+                return null;
+            }
+            set
+            {
+                if (CheckFreePlace(ind))
+                {
+                    _places.Add(ind, value);
+                    _places[ind].SetPosition(5 + ind / 5 * _placeSizeWidth + 5, ind % 5 *
+                    _placeSizeHeight + 72, PictureWidth, PictureHeight);
+                }
+            }
+        }
     }
-
-
 }
