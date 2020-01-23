@@ -40,13 +40,6 @@ namespace WindowsFormsApp1
         /// <param name="pictureHeight">Рамзер парковки - высота</param>
         public Garage(int sizes, int pictureWidth, int pictureHeight)
         {
-            /*_places = new T[sizes];
-            PictureWidth = pictureWidth;
-            PictureHeight = pictureHeight;
-            for (int i = 0; i < _places.Length; i++)
-            {
-                _places[i] = null;
-            }*/
             _maxCount = sizes;
             _places = new Dictionary<int, T>();
             PictureWidth = pictureWidth;
